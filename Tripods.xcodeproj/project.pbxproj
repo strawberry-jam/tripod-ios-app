@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5E9069691FAE3E9100180CE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9069681FAE3E9100180CE9 /* AppDelegate.swift */; };
+		5E90696B1FAE3E9100180CE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E90696A1FAE3E9100180CE9 /* ViewController.swift */; };
+		5E90696E1FAE3E9100180CE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E90696C1FAE3E9100180CE9 /* Main.storyboard */; };
+		5E9069701FAE3E9100180CE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E90696F1FAE3E9100180CE9 /* Assets.xcassets */; };
+		5E9069731FAE3E9100180CE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E9069711FAE3E9100180CE9 /* LaunchScreen.storyboard */; };
+		5E90697E1FAE3E9200180CE9 /* TripodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E90697D1FAE3E9200180CE9 /* TripodsTests.swift */; };
+		5E9069891FAE3E9200180CE9 /* TripodsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9069881FAE3E9200180CE9 /* TripodsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5E90697A1FAE3E9200180CE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E90695D1FAE3E9100180CE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E9069641FAE3E9100180CE9;
+			remoteInfo = Tripods;
+		};
+		5E9069851FAE3E9200180CE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E90695D1FAE3E9100180CE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E9069641FAE3E9100180CE9;
+			remoteInfo = Tripods;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5E9069651FAE3E9100180CE9 /* Tripods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tripods.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E9069681FAE3E9100180CE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5E90696A1FAE3E9100180CE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5E90696D1FAE3E9100180CE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5E90696F1FAE3E9100180CE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5E9069721FAE3E9100180CE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5E9069741FAE3E9100180CE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E9069791FAE3E9200180CE9 /* TripodsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripodsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E90697D1FAE3E9200180CE9 /* TripodsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripodsTests.swift; sourceTree = "<group>"; };
+		5E90697F1FAE3E9200180CE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E9069841FAE3E9200180CE9 /* TripodsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripodsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E9069881FAE3E9200180CE9 /* TripodsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripodsUITests.swift; sourceTree = "<group>"; };
+		5E90698A1FAE3E9200180CE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5E9069621FAE3E9100180CE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E9069761FAE3E9200180CE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E9069811FAE3E9200180CE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5E90695C1FAE3E9100180CE9 = {
+			isa = PBXGroup;
+			children = (
+				5E9069671FAE3E9100180CE9 /* Tripods */,
+				5E90697C1FAE3E9200180CE9 /* TripodsTests */,
+				5E9069871FAE3E9200180CE9 /* TripodsUITests */,
+				5E9069661FAE3E9100180CE9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5E9069661FAE3E9100180CE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E9069651FAE3E9100180CE9 /* Tripods.app */,
+				5E9069791FAE3E9200180CE9 /* TripodsTests.xctest */,
+				5E9069841FAE3E9200180CE9 /* TripodsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E9069671FAE3E9100180CE9 /* Tripods */ = {
+			isa = PBXGroup;
+			children = (
+				5E9069681FAE3E9100180CE9 /* AppDelegate.swift */,
+				5E90696A1FAE3E9100180CE9 /* ViewController.swift */,
+				5E90696C1FAE3E9100180CE9 /* Main.storyboard */,
+				5E90696F1FAE3E9100180CE9 /* Assets.xcassets */,
+				5E9069711FAE3E9100180CE9 /* LaunchScreen.storyboard */,
+				5E9069741FAE3E9100180CE9 /* Info.plist */,
+			);
+			path = Tripods;
+			sourceTree = "<group>";
+		};
+		5E90697C1FAE3E9200180CE9 /* TripodsTests */ = {
+			isa = PBXGroup;
+			children = (
+				5E90697D1FAE3E9200180CE9 /* TripodsTests.swift */,
+				5E90697F1FAE3E9200180CE9 /* Info.plist */,
+			);
+			path = TripodsTests;
+			sourceTree = "<group>";
+		};
+		5E9069871FAE3E9200180CE9 /* TripodsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5E9069881FAE3E9200180CE9 /* TripodsUITests.swift */,
+				5E90698A1FAE3E9200180CE9 /* Info.plist */,
+			);
+			path = TripodsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5E9069641FAE3E9100180CE9 /* Tripods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E90698D1FAE3E9200180CE9 /* Build configuration list for PBXNativeTarget "Tripods" */;
+			buildPhases = (
+				5E9069611FAE3E9100180CE9 /* Sources */,
+				5E9069621FAE3E9100180CE9 /* Frameworks */,
+				5E9069631FAE3E9100180CE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tripods;
+			productName = Tripods;
+			productReference = 5E9069651FAE3E9100180CE9 /* Tripods.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5E9069781FAE3E9200180CE9 /* TripodsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E9069901FAE3E9200180CE9 /* Build configuration list for PBXNativeTarget "TripodsTests" */;
+			buildPhases = (
+				5E9069751FAE3E9200180CE9 /* Sources */,
+				5E9069761FAE3E9200180CE9 /* Frameworks */,
+				5E9069771FAE3E9200180CE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E90697B1FAE3E9200180CE9 /* PBXTargetDependency */,
+			);
+			name = TripodsTests;
+			productName = TripodsTests;
+			productReference = 5E9069791FAE3E9200180CE9 /* TripodsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5E9069831FAE3E9200180CE9 /* TripodsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E9069931FAE3E9200180CE9 /* Build configuration list for PBXNativeTarget "TripodsUITests" */;
+			buildPhases = (
+				5E9069801FAE3E9200180CE9 /* Sources */,
+				5E9069811FAE3E9200180CE9 /* Frameworks */,
+				5E9069821FAE3E9200180CE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E9069861FAE3E9200180CE9 /* PBXTargetDependency */,
+			);
+			name = TripodsUITests;
+			productName = TripodsUITests;
+			productReference = 5E9069841FAE3E9200180CE9 /* TripodsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5E90695D1FAE3E9100180CE9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = George;
+				TargetAttributes = {
+					5E9069641FAE3E9100180CE9 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = AV9PFC3U5J;
+						ProvisioningStyle = Automatic;
+					};
+					5E9069781FAE3E9200180CE9 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = AV9PFC3U5J;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5E9069641FAE3E9100180CE9;
+					};
+					5E9069831FAE3E9200180CE9 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = AV9PFC3U5J;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5E9069641FAE3E9100180CE9;
+					};
+				};
+			};
+			buildConfigurationList = 5E9069601FAE3E9100180CE9 /* Build configuration list for PBXProject "Tripods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5E90695C1FAE3E9100180CE9;
+			productRefGroup = 5E9069661FAE3E9100180CE9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5E9069641FAE3E9100180CE9 /* Tripods */,
+				5E9069781FAE3E9200180CE9 /* TripodsTests */,
+				5E9069831FAE3E9200180CE9 /* TripodsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5E9069631FAE3E9100180CE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E9069731FAE3E9100180CE9 /* LaunchScreen.storyboard in Resources */,
+				5E9069701FAE3E9100180CE9 /* Assets.xcassets in Resources */,
+				5E90696E1FAE3E9100180CE9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E9069771FAE3E9200180CE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E9069821FAE3E9200180CE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5E9069611FAE3E9100180CE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E90696B1FAE3E9100180CE9 /* ViewController.swift in Sources */,
+				5E9069691FAE3E9100180CE9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E9069751FAE3E9200180CE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E90697E1FAE3E9200180CE9 /* TripodsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E9069801FAE3E9200180CE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E9069891FAE3E9200180CE9 /* TripodsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5E90697B1FAE3E9200180CE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E9069641FAE3E9100180CE9 /* Tripods */;
+			targetProxy = 5E90697A1FAE3E9200180CE9 /* PBXContainerItemProxy */;
+		};
+		5E9069861FAE3E9200180CE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E9069641FAE3E9100180CE9 /* Tripods */;
+			targetProxy = 5E9069851FAE3E9200180CE9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5E90696C1FAE3E9100180CE9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E90696D1FAE3E9100180CE9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5E9069711FAE3E9100180CE9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E9069721FAE3E9100180CE9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5E90698B1FAE3E9200180CE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5E90698C1FAE3E9200180CE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5E90698E1FAE3E9200180CE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AV9PFC3U5J;
+				INFOPLIST_FILE = Tripods/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.antonious.Tripods;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5E90698F1FAE3E9200180CE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AV9PFC3U5J;
+				INFOPLIST_FILE = Tripods/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.antonious.Tripods;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		5E9069911FAE3E9200180CE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = AV9PFC3U5J;
+				INFOPLIST_FILE = TripodsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.antonious.TripodsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tripods.app/Tripods";
+			};
+			name = Debug;
+		};
+		5E9069921FAE3E9200180CE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = AV9PFC3U5J;
+				INFOPLIST_FILE = TripodsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.antonious.TripodsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tripods.app/Tripods";
+			};
+			name = Release;
+		};
+		5E9069941FAE3E9200180CE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = AV9PFC3U5J;
+				INFOPLIST_FILE = TripodsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.antonious.TripodsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Tripods;
+			};
+			name = Debug;
+		};
+		5E9069951FAE3E9200180CE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = AV9PFC3U5J;
+				INFOPLIST_FILE = TripodsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.antonious.TripodsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Tripods;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5E9069601FAE3E9100180CE9 /* Build configuration list for PBXProject "Tripods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E90698B1FAE3E9200180CE9 /* Debug */,
+				5E90698C1FAE3E9200180CE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E90698D1FAE3E9200180CE9 /* Build configuration list for PBXNativeTarget "Tripods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E90698E1FAE3E9200180CE9 /* Debug */,
+				5E90698F1FAE3E9200180CE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5E9069901FAE3E9200180CE9 /* Build configuration list for PBXNativeTarget "TripodsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E9069911FAE3E9200180CE9 /* Debug */,
+				5E9069921FAE3E9200180CE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5E9069931FAE3E9200180CE9 /* Build configuration list for PBXNativeTarget "TripodsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E9069941FAE3E9200180CE9 /* Debug */,
+				5E9069951FAE3E9200180CE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5E90695D1FAE3E9100180CE9 /* Project object */;
+}
