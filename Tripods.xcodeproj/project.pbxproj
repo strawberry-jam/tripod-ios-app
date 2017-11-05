@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E5B0DC81FAFAE4B0028EF8D /* launchscreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5B0DC71FAFAE4B0028EF8D /* launchscreen.storyboard */; };
+		5E5B0DCA1FAFD0B70028EF8D /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B0DC91FAFD0B70028EF8D /* UIView+constraints.swift */; };
 		5E9069691FAE3E9100180CE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9069681FAE3E9100180CE9 /* AppDelegate.swift */; };
 		5E9069701FAE3E9100180CE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E90696F1FAE3E9100180CE9 /* Assets.xcassets */; };
 		5E90697E1FAE3E9200180CE9 /* TripodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E90697D1FAE3E9200180CE9 /* TripodsTests.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		5E5B0DC71FAFAE4B0028EF8D /* launchscreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = launchscreen.storyboard; sourceTree = "<group>"; };
+		5E5B0DC91FAFD0B70028EF8D /* UIView+constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+constraints.swift"; sourceTree = "<group>"; };
 		5E9069651FAE3E9100180CE9 /* Tripods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tripods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E9069681FAE3E9100180CE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E90696F1FAE3E9100180CE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				5E90696F1FAE3E9100180CE9 /* Assets.xcassets */,
 				5E9069741FAE3E9100180CE9 /* Info.plist */,
 				5E5B0DC71FAFAE4B0028EF8D /* launchscreen.storyboard */,
+				5E5B0DC91FAFD0B70028EF8D /* UIView+constraints.swift */,
 			);
 			path = Tripods;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E9069691FAE3E9100180CE9 /* AppDelegate.swift in Sources */,
+				5E5B0DCA1FAFD0B70028EF8D /* UIView+constraints.swift in Sources */,
 				5E9069971FAE3F3900180CE9 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
