@@ -68,53 +68,53 @@ class CameraViewController: UIViewController {
         
         _ = button
             .anchorWidth(to: margins.widthAnchor, multiplier: 0.3)
-            .anchorHeight(to: textField.heightAnchor, multiplier: 1.0)
-            .anchorTop(to: textField.topAnchor, constant: 0)
+            .anchorHeight(to: textField.heightAnchor)
+            .anchorTop(to: textField.topAnchor)
             .anchorTrailing(to: margins.trailingAnchor, constant: -8.0)
         
         _ = cameraControlsContainer
             .with(height: 100.0)
-            .anchorWidth(to: margins.widthAnchor, multiplier: 1.0)
-            .anchorLeading(to: margins.leadingAnchor, constant: 0)
-            .anchorBottom(to: margins.bottomAnchor, constant: 0)
+            .anchorWidth(to: margins.widthAnchor)
+            .anchorLeading(to: margins.leadingAnchor)
+            .anchorBottom(to: margins.bottomAnchor)
         
         _ = lastPictureTakenImageView
             .with(width: 50.0)
             .with(height: 50.0)
             .anchorLeading(to: cameraControlsContainer.leadingAnchor, constant: 8.0)
-            .alignCenterY(to: cameraControlsContainer.centerYAnchor, constant: 0)
+            .alignCenterY(to: cameraControlsContainer.centerYAnchor)
         
         super.updateViewConstraints()
     }
 }
 
 extension UIView {
-    func anchorLeading(to anchor: NSLayoutXAxisAnchor, constant c: CGFloat) -> UIView {
+    func anchorLeading(to anchor: NSLayoutXAxisAnchor, constant c: CGFloat = 0) -> UIView {
         self.leadingAnchor.constraint(equalTo: anchor, constant: c).isActive = true
         return self
     }
     
-    func anchorTrailing(to anchor: NSLayoutXAxisAnchor, constant c: CGFloat) -> UIView {
+    func anchorTrailing(to anchor: NSLayoutXAxisAnchor, constant c: CGFloat = 0) -> UIView {
         self.trailingAnchor.constraint(equalTo: anchor, constant: c).isActive = true
         return self
     }
     
-    func anchorTop(to anchor: NSLayoutYAxisAnchor, constant c: CGFloat) -> UIView {
+    func anchorTop(to anchor: NSLayoutYAxisAnchor, constant c: CGFloat = 0) -> UIView {
         self.topAnchor.constraint(equalTo: anchor, constant: c).isActive = true
         return self
     }
     
-    func anchorBottom(to anchor: NSLayoutYAxisAnchor, constant c: CGFloat) -> UIView {
+    func anchorBottom(to anchor: NSLayoutYAxisAnchor, constant c: CGFloat = 0) -> UIView {
         self.bottomAnchor.constraint(equalTo: anchor, constant: c).isActive = true
         return self
     }
     
-    func anchorWidth(to dimension: NSLayoutDimension, multiplier m: CGFloat) -> UIView {
+    func anchorWidth(to dimension: NSLayoutDimension, multiplier m: CGFloat = 1) -> UIView {
         self.widthAnchor.constraint(equalTo: dimension, multiplier: m).isActive = true
         return self
     }
     
-    func anchorHeight(to dimension: NSLayoutDimension, multiplier m: CGFloat) -> UIView {
+    func anchorHeight(to dimension: NSLayoutDimension, multiplier m: CGFloat = 1) -> UIView {
         self.heightAnchor.constraint(equalTo: dimension, multiplier: m).isActive = true
         return self
     }
@@ -129,12 +129,12 @@ extension UIView {
         return self
     }
     
-    func alignCenterX(to anchor: NSLayoutXAxisAnchor, constant c: CGFloat) -> UIView {
+    func alignCenterX(to anchor: NSLayoutXAxisAnchor, constant c: CGFloat = 0) -> UIView {
         self.centerXAnchor.constraint(equalTo: anchor, constant: c).isActive = true
         return self
     }
     
-    func alignCenterY(to anchor: NSLayoutYAxisAnchor, constant c: CGFloat) -> UIView {
+    func alignCenterY(to anchor: NSLayoutYAxisAnchor, constant c: CGFloat = 0) -> UIView {
         self.centerYAnchor.constraint(equalTo: anchor, constant: c).isActive = true
         return self
     }
