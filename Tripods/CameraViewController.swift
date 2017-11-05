@@ -27,11 +27,22 @@ class CameraViewController: UIViewController {
         return imageView
     }()
     
+    let cameraModelLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Canon EOS 60D"
+        label.textColor = .yellow
+        label.font = UIFont.boldSystemFont(ofSize: 14.0)
+        
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addSubview(cameraControlsContainer)
         cameraControlsContainer.addSubview(lastPictureTakenImageView)
+        cameraControlsContainer.addSubview(cameraModelLabel)
         
         view.setNeedsUpdateConstraints()
     }
@@ -49,6 +60,10 @@ class CameraViewController: UIViewController {
             .with(height: 60.0)
             .anchorLeading(to: cameraControlsContainer.leadingAnchor, constant: 10)
             .alignCenterY(to: cameraControlsContainer.centerYAnchor)
+        
+        _ = cameraModelLabel
+            .anchorTop(to: cameraControlsContainer.topAnchor, constant: 10)
+            .anchorTrailing(to: cameraControlsContainer.trailingAnchor, constant: -10)
         
         super.updateViewConstraints()
     }
