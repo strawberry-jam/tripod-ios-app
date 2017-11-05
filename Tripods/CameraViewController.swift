@@ -10,38 +10,18 @@ import UIKit
 
 class CameraViewController: UIViewController {
     
-    let textField: UITextField = {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.borderStyle = .roundedRect
+    let cameraControlsContainer: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .black
         
-        return textField
-    }()
-    
-    let button: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.layer.cornerRadius = 4
-        button.setTitle("Button", for: .normal)
-        button.backgroundColor = .lightGray
-        button.titleLabel?.textColor = .black
-    
-        return button
-    }()
-    
-    let cameraControlsContainer: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.backgroundColor = .black
-        stackView.axis = .horizontal
-        
-        return stackView
+        return view
     }()
     
     let lastPictureTakenImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.layer.cornerRadius = 8.0
+        imageView.layer.cornerRadius = 2.0
         imageView.backgroundColor = .lightGray
         
         return imageView
@@ -50,8 +30,6 @@ class CameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(textField)
-        view.addSubview(button)
         view.addSubview(cameraControlsContainer)
         cameraControlsContainer.addSubview(lastPictureTakenImageView)
         
@@ -61,27 +39,15 @@ class CameraViewController: UIViewController {
     override func updateViewConstraints() {
         let margins = view.layoutMarginsGuide
         
-        _ = textField
-            .anchorLeading(to: margins.leadingAnchor, constant: 8.0)
-            .anchorTrailing(to: button.leadingAnchor, constant: -8.0)
-            .anchorTop(to: margins.topAnchor, constant: 80.0)
-        
-        _ = button
-            .anchorWidth(to: margins.widthAnchor, multiplier: 0.3)
-            .anchorHeight(to: textField.heightAnchor)
-            .anchorTop(to: textField.topAnchor)
-            .anchorTrailing(to: margins.trailingAnchor, constant: -8.0)
-        
         _ = cameraControlsContainer
-            .with(height: 100.0)
-            .anchorWidth(to: margins.widthAnchor)
-            .anchorLeading(to: margins.leadingAnchor)
+            .with(height: 90.0)
+            .anchorWidth(to: view.widthAnchor)
             .anchorBottom(to: margins.bottomAnchor)
         
         _ = lastPictureTakenImageView
-            .with(width: 50.0)
-            .with(height: 50.0)
-            .anchorLeading(to: cameraControlsContainer.leadingAnchor, constant: 8.0)
+            .with(width: 60.0)
+            .with(height: 60.0)
+            .anchorLeading(to: cameraControlsContainer.leadingAnchor, constant: 10)
             .alignCenterY(to: cameraControlsContainer.centerYAnchor)
         
         super.updateViewConstraints()
