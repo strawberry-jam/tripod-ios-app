@@ -18,15 +18,11 @@ class CameraViewController: UIViewController {
         return view
     }()
     
-    let lastPictureTakenImageView: UIButton = {
+    let lastPictureTakenButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 2.0
-        button.backgroundColor = .lightGray
         button.addTarget(self, action: #selector(onLastImageTakenClicked), for: .touchUpInside)
-        button.contentHorizontalAlignment = .fill
-        button.contentVerticalAlignment = .fill
-        button.imageView?.contentMode = .scaleAspectFill
         
         return button
     }()
@@ -56,7 +52,7 @@ class CameraViewController: UIViewController {
         
         navigationController?.setNavigationBarHidden(true, animated: false)
         view.addSubview(cameraControlsContainer)
-        view.addSubview(lastPictureTakenImageView)
+        view.addSubview(lastPictureTakenButton)
         view.addSubview(captureButton)
         view.addSubview(cameraModelLabel)
         
@@ -68,9 +64,9 @@ class CameraViewController: UIViewController {
             .anchorWidth(to: view.widthAnchor)
             .anchorBottom(to: margins.bottomAnchor)
         
-        _ = lastPictureTakenImageView
+        _ = lastPictureTakenButton
             .anchorHeight(to: cameraControlsContainer.heightAnchor, multiplier: 0.8)
-            .anchorWidth(to: lastPictureTakenImageView.heightAnchor)
+            .anchorWidth(to: lastPictureTakenButton.heightAnchor)
             .anchorLeading(to: cameraControlsContainer.leadingAnchor, constant: 6.0)
             .alignCenterY(to: cameraControlsContainer.centerYAnchor)
         
@@ -88,7 +84,8 @@ class CameraViewController: UIViewController {
         
         ensurePhotoPermissions {
             fetchMostRecentPhoto {
-                self.lastPictureTakenImageView.setBackgroundImage($0, for: .normal)
+                self.lastPictureTakenButton.setBackgroundImageContentMode(contentMode: .scaleAspectFill)
+                self.lastPictureTakenButton.setBackgroundImage($0, for: .normal)
             }
         }
         
@@ -110,7 +107,8 @@ class CameraViewController: UIViewController {
 
 extension CameraViewController: UIViewControllerPreviewingDelegate {
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
-        if lastPictureTakenImageView.frame.contains(location) {
+        if lastPictureTakenButton.frame.contains(location) {
+            previewingContext.sourceRect = lastPictureTakenButton.frame
             return FullScreenImageViewController()
         }
         
@@ -121,3 +119,12 @@ extension CameraViewController: UIViewControllerPreviewingDelegate {
         navigationController?.showDetailViewController(viewControllerToCommit, sender: self)
     }
 }
+
+extension UIButton {
+    func setBackgroundImageContentMode(contentMode: UIViewContentMode) {
+        self.subviews
+            .map { v in v as? UIImageView }
+            .forEach { v in v?.contentMode = contentMode }
+    }
+}
+
