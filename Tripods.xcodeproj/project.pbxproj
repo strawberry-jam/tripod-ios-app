@@ -15,6 +15,8 @@
 		5E9069891FAE3E9200180CE9 /* TripodsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9069881FAE3E9200180CE9 /* TripodsUITests.swift */; };
 		5E9069971FAE3F3900180CE9 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9069961FAE3F3900180CE9 /* CameraViewController.swift */; };
 		5EB2072F1FB14687003DFC09 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB2072E1FB14687003DFC09 /* Alamofire.framework */; };
+		5EB346E71FB15A23009495C3 /* CameraAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB346E61FB15A23009495C3 /* CameraAPI.swift */; };
+		5EB346E91FB16837009495C3 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB346E81FB16837009495C3 /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		5E90698A1FAE3E9200180CE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E9069961FAE3F3900180CE9 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		5EB2072E1FB14687003DFC09 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		5EB346E61FB15A23009495C3 /* CameraAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraAPI.swift; sourceTree = "<group>"; };
+		5EB346E81FB16837009495C3 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EB346E91FB16837009495C3 /* SwiftyJSON.framework in Frameworks */,
 				5EB2072F1FB14687003DFC09 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +112,7 @@
 				5E9069741FAE3E9100180CE9 /* Info.plist */,
 				5E5B0DC71FAFAE4B0028EF8D /* launchscreen.storyboard */,
 				5E5B0DC91FAFD0B70028EF8D /* UIView+constraints.swift */,
+				5EB346E61FB15A23009495C3 /* CameraAPI.swift */,
 			);
 			path = Tripods;
 			sourceTree = "<group>";
@@ -132,6 +138,7 @@
 		5EB2072D1FB14687003DFC09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5EB346E81FB16837009495C3 /* SwiftyJSON.framework */,
 				5EB2072E1FB14687003DFC09 /* Alamofire.framework */,
 			);
 			name = Frameworks;
@@ -277,9 +284,11 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -293,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E9069691FAE3E9100180CE9 /* AppDelegate.swift in Sources */,
+				5EB346E71FB15A23009495C3 /* CameraAPI.swift in Sources */,
 				5E5B0DCA1FAFD0B70028EF8D /* UIView+constraints.swift in Sources */,
 				5E9069971FAE3F3900180CE9 /* CameraViewController.swift in Sources */,
 			);
