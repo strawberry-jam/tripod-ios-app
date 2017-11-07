@@ -14,6 +14,7 @@
 		5E90697E1FAE3E9200180CE9 /* TripodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E90697D1FAE3E9200180CE9 /* TripodsTests.swift */; };
 		5E9069891FAE3E9200180CE9 /* TripodsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9069881FAE3E9200180CE9 /* TripodsUITests.swift */; };
 		5E9069971FAE3F3900180CE9 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9069961FAE3F3900180CE9 /* CameraViewController.swift */; };
+		5EB2072F1FB14687003DFC09 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB2072E1FB14687003DFC09 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		5E9069881FAE3E9200180CE9 /* TripodsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripodsUITests.swift; sourceTree = "<group>"; };
 		5E90698A1FAE3E9200180CE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E9069961FAE3F3900180CE9 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		5EB2072E1FB14687003DFC09 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EB2072F1FB14687003DFC09 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				5E90697C1FAE3E9200180CE9 /* TripodsTests */,
 				5E9069871FAE3E9200180CE9 /* TripodsUITests */,
 				5E9069661FAE3E9100180CE9 /* Products */,
+				5EB2072D1FB14687003DFC09 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +129,14 @@
 			path = TripodsUITests;
 			sourceTree = "<group>";
 		};
+		5EB2072D1FB14687003DFC09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5EB2072E1FB14687003DFC09 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +147,7 @@
 				5E9069611FAE3E9100180CE9 /* Sources */,
 				5E9069621FAE3E9100180CE9 /* Frameworks */,
 				5E9069631FAE3E9100180CE9 /* Resources */,
+				5EB207301FB146EB003DFC09 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -255,6 +268,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5EB207301FB146EB003DFC09 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5E9069611FAE3E9100180CE9 /* Sources */ = {
@@ -397,7 +428,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AV9PFC3U5J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Tripods/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.antonious.Tripods;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -410,7 +446,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AV9PFC3U5J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Tripods/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.antonious.Tripods;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -27,6 +27,16 @@ class CameraViewController: UIViewController {
         return imageView
     }()
     
+    let captureButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .white
+        button.layer.cornerRadius = 30.0
+        button.addTarget(self, action: #selector(onCaptureClicked), for: .touchUpInside)
+        
+        return button
+    }()
+    
     let cameraModelLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -42,6 +52,7 @@ class CameraViewController: UIViewController {
         
         view.addSubview(cameraControlsContainer)
         cameraControlsContainer.addSubview(lastPictureTakenImageView)
+        cameraControlsContainer.addSubview(captureButton)
         cameraControlsContainer.addSubview(cameraModelLabel)
         
         let margins = view.layoutMarginsGuide
@@ -57,6 +68,12 @@ class CameraViewController: UIViewController {
             .anchorLeading(to: cameraControlsContainer.leadingAnchor, constant: 10)
             .alignCenterY(to: cameraControlsContainer.centerYAnchor)
         
+        _ = captureButton
+            .with(width: 60.0)
+            .with(height: 60.0)
+            .alignCenterX(to: cameraControlsContainer.centerXAnchor)
+            .alignCenterY(to: cameraControlsContainer.centerYAnchor)
+        
         _ = cameraModelLabel
             .anchorTop(to: cameraControlsContainer.topAnchor, constant: 10)
             .anchorTrailing(to: cameraControlsContainer.trailingAnchor, constant: -10)
@@ -66,6 +83,10 @@ class CameraViewController: UIViewController {
         ensurePhotoPermissions {
             fetchMostRecentPhoto { self.lastPictureTakenImageView.image = $0 }
         }
+    }
+    
+    func onCaptureClicked() {
+        // handle capture event
     }
     
     func ensurePhotoPermissions(_ doOnAuthorized: @escaping () -> Void) {
