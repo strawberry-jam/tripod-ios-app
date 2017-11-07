@@ -84,53 +84,33 @@ class CameraViewController: UIViewController {
         ensurePhotoPermissions {
             fetchMostRecentPhoto { self.lastPictureTakenImageView.setBackgroundImage($0, for: .normal) }
         }
+        
+        if traitCollection.forceTouchCapability == .available {
+            registerForPreviewing(with: self, sourceView: view)
+        }
     }
     
-    func onCaptureClicked() {
+    @objc func onCaptureClicked() {
         CameraAPI().captureImage()
     }
     
-    func onLastImageTakenClicked() {
+    @objc func onLastImageTakenClicked() {
         if let url = URL(string:"photos-redirect://") {
             UIApplication.shared.open(url)
         }
     }
-    
-    func ensurePhotoPermissions(_ doOnAuthorized: @escaping () -> Void) {
-        let authorizationStatus = PHPhotoLibrary.authorizationStatus()
-        
-        switch (authorizationStatus) {
-        case .authorized:
-            doOnAuthorized()
-        case .notDetermined:
-            PHPhotoLibrary.requestAuthorization({ status in
-                if status == .authorized {
-                    doOnAuthorized()
-                }
-            })
-        default:
-            return
-        }
-    }
 }
 
-
-import Photos
-
-func fetchMostRecentPhoto(callback: @escaping (UIImage?) -> Void) {
-    let fetchOptions = PHFetchOptions()
-    fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
-    fetchOptions.fetchLimit = 1
+extension CameraViewController: UIViewControllerPreviewingDelegate {
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        if view.hitTest(location, with: nil) != nil {
+            return FullScreenImageViewController()
+        }
+        
+        return nil
+    }
     
-    let fetchResult = PHAsset.fetchAssets(with: .image, options: fetchOptions)
-    
-    if let asset = fetchResult.firstObject {
-        PHImageManager.default().requestImage(for: asset,
-                                              targetSize: CGSize(width: asset.pixelWidth, height: asset.pixelHeight),
-                                              contentMode: .aspectFit,
-                                              options: nil,
-                                              resultHandler: { image, info in callback(image) })
-    } else {
-        callback(nil)
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        showDetailViewController(viewControllerToCommit, sender: self)
     }
 }
