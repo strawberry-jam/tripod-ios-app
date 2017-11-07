@@ -19,6 +19,8 @@ class FullScreenImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let navCon = navigationController
+        navigationController?.setNavigationBarHidden(false, animated: true)
         view.backgroundColor = .black
         view.addSubview(image)
         

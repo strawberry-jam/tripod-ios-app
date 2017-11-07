@@ -24,6 +24,7 @@ class CameraViewController: UIViewController {
         imageView.layer.cornerRadius = 2.0
         imageView.backgroundColor = .lightGray
         imageView.addTarget(self, action: #selector(onLastImageTakenClicked), for: .touchUpInside)
+        imageView.imageView?.contentMode = .scaleAspectFill
         
         return imageView
     }()
@@ -51,22 +52,24 @@ class CameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.setNavigationBarHidden(true, animated: false)
         view.addSubview(cameraControlsContainer)
-        cameraControlsContainer.addSubview(lastPictureTakenImageView)
-        cameraControlsContainer.addSubview(captureButton)
-        cameraControlsContainer.addSubview(cameraModelLabel)
+        view.addSubview(lastPictureTakenImageView)
+        view.addSubview(captureButton)
+        view.addSubview(cameraModelLabel)
         
         let margins = view.layoutMarginsGuide
         
         _ = cameraControlsContainer
             .with(height: 90.0)
+            .anchorLeading(to: view.leadingAnchor)
             .anchorWidth(to: view.widthAnchor)
             .anchorBottom(to: margins.bottomAnchor)
         
         _ = lastPictureTakenImageView
-            .with(width: 60.0)
-            .with(height: 60.0)
-            .anchorLeading(to: cameraControlsContainer.leadingAnchor, constant: 10)
+            .anchorHeight(to: cameraControlsContainer.heightAnchor, multiplier: 0.8)
+            .anchorWidth(to: lastPictureTakenImageView.heightAnchor)
+            .anchorLeading(to: cameraControlsContainer.leadingAnchor, constant: 6.0)
             .alignCenterY(to: cameraControlsContainer.centerYAnchor)
         
         _ = captureButton
@@ -82,7 +85,9 @@ class CameraViewController: UIViewController {
         view.setNeedsUpdateConstraints()
         
         ensurePhotoPermissions {
-            fetchMostRecentPhoto { self.lastPictureTakenImageView.setBackgroundImage($0, for: .normal) }
+            fetchMostRecentPhoto {
+                self.lastPictureTakenImageView.setBackgroundImage($0, for: .normal)
+            }
         }
         
         if traitCollection.forceTouchCapability == .available {
@@ -103,7 +108,7 @@ class CameraViewController: UIViewController {
 
 extension CameraViewController: UIViewControllerPreviewingDelegate {
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
-        if view.hitTest(location, with: nil) != nil {
+        if lastPictureTakenImageView.frame.contains(location) {
             return FullScreenImageViewController()
         }
         
@@ -111,6 +116,6 @@ extension CameraViewController: UIViewControllerPreviewingDelegate {
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
-        showDetailViewController(viewControllerToCommit, sender: self)
+        navigationController?.showDetailViewController(viewControllerToCommit, sender: self)
     }
 }
