@@ -86,7 +86,7 @@ class CameraViewController: UIViewController {
     }
     
     func onCaptureClicked() {
-        // handle capture event
+        CameraAPI().captureImage()
     }
     
     func ensurePhotoPermissions(_ doOnAuthorized: @escaping () -> Void) {

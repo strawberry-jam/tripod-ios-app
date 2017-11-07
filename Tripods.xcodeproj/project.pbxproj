@@ -17,6 +17,7 @@
 		5EB2072F1FB14687003DFC09 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB2072E1FB14687003DFC09 /* Alamofire.framework */; };
 		5EB346E71FB15A23009495C3 /* CameraAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB346E61FB15A23009495C3 /* CameraAPI.swift */; };
 		5EB346E91FB16837009495C3 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB346E81FB16837009495C3 /* SwiftyJSON.framework */; };
+		5EB346EB1FB168A8009495C3 /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB346EA1FB168A8009495C3 /* Json.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		5EB2072E1FB14687003DFC09 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		5EB346E61FB15A23009495C3 /* CameraAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraAPI.swift; sourceTree = "<group>"; };
 		5EB346E81FB16837009495C3 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		5EB346EA1FB168A8009495C3 /* Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				5E5B0DC71FAFAE4B0028EF8D /* launchscreen.storyboard */,
 				5E5B0DC91FAFD0B70028EF8D /* UIView+constraints.swift */,
 				5EB346E61FB15A23009495C3 /* CameraAPI.swift */,
+				5EB346EA1FB168A8009495C3 /* Json.swift */,
 			);
 			path = Tripods;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E9069691FAE3E9100180CE9 /* AppDelegate.swift in Sources */,
+				5EB346EB1FB168A8009495C3 /* Json.swift in Sources */,
 				5EB346E71FB15A23009495C3 /* CameraAPI.swift in Sources */,
 				5E5B0DCA1FAFD0B70028EF8D /* UIView+constraints.swift in Sources */,
 				5E9069971FAE3F3900180CE9 /* CameraViewController.swift in Sources */,
