@@ -19,14 +19,16 @@ class CameraViewController: UIViewController {
     }()
     
     let lastPictureTakenImageView: UIButton = {
-        let imageView = UIButton()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.layer.cornerRadius = 2.0
-        imageView.backgroundColor = .lightGray
-        imageView.addTarget(self, action: #selector(onLastImageTakenClicked), for: .touchUpInside)
-        imageView.imageView?.contentMode = .scaleAspectFill
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.cornerRadius = 2.0
+        button.backgroundColor = .lightGray
+        button.addTarget(self, action: #selector(onLastImageTakenClicked), for: .touchUpInside)
+        button.contentHorizontalAlignment = .fill
+        button.contentVerticalAlignment = .fill
+        button.imageView?.contentMode = .scaleAspectFill
         
-        return imageView
+        return button
     }()
     
     let captureButton: UIButton = {

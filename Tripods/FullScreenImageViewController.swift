@@ -12,6 +12,7 @@ class FullScreenImageViewController: UIViewController {
     let image: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFill
         
         return imageView
     }()
