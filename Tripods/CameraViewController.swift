@@ -18,11 +18,12 @@ class CameraViewController: UIViewController {
         return view
     }()
     
-    let lastPictureTakenImageView: UIImageView = {
-        let imageView = UIImageView()
+    let lastPictureTakenImageView: UIButton = {
+        let imageView = UIButton()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.cornerRadius = 2.0
         imageView.backgroundColor = .lightGray
+        imageView.addTarget(self, action: #selector(onLastImageTakenClicked), for: .touchUpInside)
         
         return imageView
     }()
@@ -81,12 +82,18 @@ class CameraViewController: UIViewController {
         view.setNeedsUpdateConstraints()
         
         ensurePhotoPermissions {
-            fetchMostRecentPhoto { self.lastPictureTakenImageView.image = $0 }
+            fetchMostRecentPhoto { self.lastPictureTakenImageView.setBackgroundImage($0, for: .normal) }
         }
     }
     
     func onCaptureClicked() {
         CameraAPI().captureImage()
+    }
+    
+    func onLastImageTakenClicked() {
+        if let url = URL(string:"photos-redirect://") {
+            UIApplication.shared.open(url)
+        }
     }
     
     func ensurePhotoPermissions(_ doOnAuthorized: @escaping () -> Void) {
