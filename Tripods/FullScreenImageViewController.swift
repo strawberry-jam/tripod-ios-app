@@ -20,8 +20,6 @@ class FullScreenImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let navCon = navigationController
-        navigationController?.setNavigationBarHidden(false, animated: true)
         view.backgroundColor = .black
         view.addSubview(image)
         
@@ -37,5 +35,9 @@ class FullScreenImageViewController: UIViewController {
             fetchMostRecentPhoto { self.image.image = $0 }
         }
         
+    }
+    
+    func onPreviewPopped() {
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 }

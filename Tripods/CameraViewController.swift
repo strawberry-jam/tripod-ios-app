@@ -51,6 +51,8 @@ class CameraViewController: UIViewController {
         super.viewDidLoad()
         
         navigationController?.setNavigationBarHidden(true, animated: false)
+        navigationController?.delegate = self
+        
         view.addSubview(cameraControlsContainer)
         view.addSubview(lastPictureTakenButton)
         view.addSubview(captureButton)
@@ -116,7 +118,19 @@ extension CameraViewController: UIViewControllerPreviewingDelegate {
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
-        navigationController?.showDetailViewController(viewControllerToCommit, sender: self)
+        navigationController?.show(viewControllerToCommit, sender: self)
+        
+        if let fullScreenVC = viewControllerToCommit as? FullScreenImageViewController {
+            fullScreenVC.onPreviewPopped()
+        }
+    }
+}
+
+extension CameraViewController: UINavigationControllerDelegate {
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        if viewController is CameraViewController {
+            navigationController.setNavigationBarHidden(true, animated: true)
+        }
     }
 }
 
