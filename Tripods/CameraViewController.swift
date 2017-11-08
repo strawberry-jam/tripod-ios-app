@@ -84,20 +84,32 @@ class CameraViewController: UIViewController {
         
         view.setNeedsUpdateConstraints()
         
+        if traitCollection.forceTouchCapability == .available {
+            registerForPreviewing(with: self, sourceView: view)
+        }
+        
+        loadMostRecentImage()
+        
+        NotificationCenter.default.addObserver(forName: Notification.Name.UIApplicationWillEnterForeground, object: nil, queue: OperationQueue.current) { _ in
+            self.loadMostRecentImage()
+        }
+    }
+    
+    func loadMostRecentImage() {
         ensurePhotoPermissions {
             fetchMostRecentPhoto {
                 self.lastPictureTakenButton.setBackgroundImageContentMode(contentMode: .scaleAspectFill)
                 self.lastPictureTakenButton.setBackgroundImage($0, for: .normal)
             }
         }
-        
-        if traitCollection.forceTouchCapability == .available {
-            registerForPreviewing(with: self, sourceView: view)
-        }
     }
     
     @objc func onCaptureClicked() {
-        CameraAPI().captureImage()
+        CameraAPI().captureImage { imageCaptureResult in
+            if let image = imageCaptureResult.image {
+                self.lastPictureTakenButton.setBackgroundImage(image, for: .normal)
+            }
+        }
     }
     
     @objc func onLastImageTakenClicked() {
