@@ -14,7 +14,7 @@ class CameraAPI {
     let baseUrl = "http://192.168.0.18:5000"
     
     func captureImage(callback: @escaping (CaptureResponse) -> Void) {
-        Alamofire.request(baseUrl).jsonRepsonse { callback($0) }
+        Alamofire.request("\(baseUrl)/capture", method: .post).jsonRepsonse { callback($0) }
     }
 }
 

@@ -26,6 +26,18 @@ func fetchMostRecentPhoto(callback: @escaping (UIImage?) -> Void) {
     }
 }
 
+func savePhoto(_ image: UIImage, onSucess: @escaping () -> ()) {
+    
+    PHPhotoLibrary.shared().performChanges({
+        _ = PHAssetChangeRequest.creationRequestForAsset(from: image)
+    }) { success, error in
+        if success {
+            onSucess()
+        }
+    }
+
+}
+
 func ensurePhotoPermissions(_ doOnAuthorized: @escaping () -> Void) {
     let authorizationStatus = PHPhotoLibrary.authorizationStatus()
     

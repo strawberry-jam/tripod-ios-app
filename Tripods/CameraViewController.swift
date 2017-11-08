@@ -107,7 +107,7 @@ class CameraViewController: UIViewController {
     @objc func onCaptureClicked() {
         CameraAPI().captureImage { imageCaptureResult in
             if let image = imageCaptureResult.image {
-                self.lastPictureTakenButton.setBackgroundImage(image, for: .normal)
+                savePhoto(image) { self.loadMostRecentImage() }
             }
         }
     }
